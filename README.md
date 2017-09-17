@@ -14,3 +14,5 @@ coverage stats for each site using BBMap (its super fast). I also didn't use cir
 to make something clear and easy to understand, not something with loads of detail because I find it just becomes cluttered and 
 confusing. You will need/should, therefore, tweak the heights of the lines, the window and offsets etc. to suit the 
 visualisation of your data. 
+
+Essentially what I've done is very simple: plus and minus strands are plotted by track with intergenic regions not plotted as a 'gap', but as a filled segments the same color as the background. 
