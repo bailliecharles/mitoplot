@@ -9,9 +9,8 @@ alignments, or linkage maps etc. None seemed flexible enough to me for plotting 
 length - probably (definitely!) me not seeing it! I bet the bioconductor folks have something awesome. 
 
 Anyway, here's my hack using the {circlize} package. Its pretty neat and easy to learn with the brill documentation - took 
-me an evening to put this together.  You might not want/ be able to include everything I did, but if you're interested I got 
-coverage stats for each site using BBMap. I also didn't use criclize to annotate anything (did mine in Inkscape) but you could 
-easily add a legend, names, an arrow for translation direction etc. just see the documentation. The philosophy here is to have 
-something clear and easy to understand, not something with loads of detail because I find it just becomes cluttered and 
+me an evening to put this together.  You might not want/ be able to include everything I did but if you're interested, I got 
+coverage stats for each site using BBMap (its super fast). I also didn't use circlize to annotate anything (did mine in Inkscape) but you could easily add a legend, names, an arrow for translation direction etc. just see the documentation. My philosophy was 
+to make something clear and easy to understand, not something with loads of detail because I find it just becomes cluttered and 
 confusing. You will need/should, therefore, tweak the heights of the lines, the window and offsets etc. to suit the 
 visualisation of your data. 
