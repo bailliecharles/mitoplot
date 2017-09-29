@@ -87,7 +87,7 @@ par(new = TRUE)
 circos.par(cell.padding=c(0,0.2,0,0.2), gap.degree=0,start.degree = 90, "canvas.xlim" = c(-1.20, 1.20), "canvas.ylim" = c(-1.20, 1.20))
 circos.initialize(factors = factors, xlim = c(1, nrow(basecov)))
 circos.trackPlotRegion(factors = factors, ylim = c(0, 7), track.height = 0.1, bg.border="white",bg.col="white") 
-circos.lines(positions, base3, sector.index = "a", type="h", col="grey") # you may get 'notes' here but everything looks goo don't worry
+circos.lines(positions, base2, sector.index = "a", type="h", col="grey") # you may get 'notes' here but everything looks goo don't worry
 # clear again
 circos.clear()
           
