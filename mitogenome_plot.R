@@ -10,7 +10,7 @@ library(seqinr)
 
 ##### Mitogenome feature tracks #######
 ### Plus ###
-# data needs to be in a data frame - I addedd a column for colors with the HEX codes (colorbrewer Dark2), but you could cbind a vector
+# data simply needs to be in a data frame - I addedd a column for colors with the HEX codes (colorbrewer Dark2), but you could cbind a vector
 # after reading in the data. Cols are Color, feature start position (bp), feature stop position (bp), name of feature,
 # like so:
 # Name	Start	Stop	Color
