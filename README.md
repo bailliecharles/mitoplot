@@ -1,4 +1,4 @@
-# mitoplot
+# mitoplotR
 plot circular genomes with R
 
 I recently needed to make visualisations of mitogenomes and struggled to find the right solution. There are many nice 
