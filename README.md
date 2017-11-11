@@ -1,5 +1,5 @@
 # mitoplot
-plotting circular genomes with R
+plot circular genomes with R
 
 I recently needed to make visualisations of mitogenomes and struggled to find the right solution. There are many nice 
 programs out there that do this job but they either needed .gbk file format, are unnecessarily complicated, or aesthetically 
