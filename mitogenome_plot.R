@@ -108,6 +108,17 @@ getMultinomialModel <- function(sequence) {
   return(model)
 }
 
+getFrequency <- function(sequence, alphabet = c("a","c","g","t"))
+{
+  freq <- table(sequence)[alphabet]
+  names(freq) <- alphabet
+  # evaluates the value for every symbol of the alphabet
+  for(bp in alphabet){
+    if(is.na(freq[bp])) freq[bp] <- 0
+  }
+  return(freq)
+}
+
 getSequenceLocalData <- function(sequence,window.length,offset)
 {
   # initializes the window, sequence and output parameters
