@@ -1,0 +1,22 @@
+Name,Start,Stop,Color
+Gap1,1,7844,white
+NAD1,7845,8765,#1b9e77
+Gap2,8766,8790,white
+trnL1(tag),8791,8851,#e7298a
+trnE(ttc),8823,8891,#e7298a
+trnL2(taa),8895,8955,#e7298a
+trnS1(tct),8956,9012,#e7298a
+trnW(tca),9013,9063,#e7298a
+CYTB,9059,10189,#66a61e
+trnT(tgt),10192,10243,#e7298a
+Gap3,10244,11987,white
+trnH(gtg),11988,12045,#e7298a
+NAD4 ,12050,13353,#1b9e77
+NAD4l,13347,13643,#1b9e77
+trnP(tgg),13647,13703,#e7298a
+Gap4,13708,14255,white
+16S,14256,15335,#d95f02
+trnQ(ttg),15336,15394,#e7298a
+Gap5,15395,16432,white
+trnC(gca),16433,16483,#e7298a
+trnY(gta),16485,16542,#e7298a
