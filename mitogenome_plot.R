@@ -137,7 +137,7 @@ circos.clear()
 # Plot 
 par(new = TRUE)
 circos.par(cell.padding=c(0,0.2,0,0.2), gap.degree=0,start.degree = 90, "canvas.xlim" = c(-1.4, 1.4), "canvas.ylim" = c(-1.4, 1.4))
-circos.initialize(factors = seqFac, xlim = c(1, nrow(gc_cnt)))
+circos.initialize(factors = seqFac, xlim = c(1, nrow(gcCont)))
 circos.trackPlotRegion(factors = seqFac, ylim = c(0, 1), track.height = 0.1, bg.border="white",bg.col="white") 
 circos.lines(position, gcCont[,5],  sector.index = "a", type="l", area=T, border="white", col="grey")
 
