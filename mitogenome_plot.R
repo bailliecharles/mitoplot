@@ -9,14 +9,14 @@
 ### Example of getting set up to run function:
 
 
-#seq = read.fasta(file.choose()) # Read in sequence data
-#seq = seq[[1]][1:16544] # and pull out just the sequence stored in a character vector
+#seq <- read.fasta(file.choose()) # Read in sequence data
+#seq <- seq[[1]][1:16544] # and pull out just the sequence stored in a character vector
 
-#plus = read.csv(file.choose()) # read in plus coords and colors
-#minus = read.csv(file.choose()) # read in plus coords and colors
+#plus <- read.csv(file.choose()) # read in plus coords and colors
+#minus <- read.csv(file.choose()) # read in plus coords and colors
 
-#coverage = read.csv(file.choose()) # read in coverage per base
-#coverage = coverage[,1] # make sure its a vector
+#coverage <- read.csv(file.choose()) # read in coverage per base
+#coverage <- coverage[,1] # make sure its a vector
 
 
 mitoplotR <- function (seq, plus, minus, coverage){
@@ -74,17 +74,17 @@ circos.clear()
 
 #### Plus strand
   # Change classes
-    plus$Color= as.character(plus$Color)
-    plus$Start=as.numeric(plus$Start)
-    plus$Stop=as.numeric(plus$Stop)
+    plus$Color<- as.character(plus$Color)
+    plus$Start<-as.numeric(plus$Start)
+    plus$Stop<-as.numeric(plus$Stop)
   # hack things around for whatever order you want - here oriented to COI.
-    plusOrd = as.character(plus$Name)
-    plusFac = plus$Name
-    plusFac = factor(plusFac, levels = c(plusOrd))
+    plusOrd <- as.character(plus$Name)
+    plusFac <- plus$Name
+    plusFac <- factor(plusFac, levels = c(plusOrd))
   # Make all of this into a matrix for the plotting
-    plusY = cbind(plus$Start, plus$Stop)
+    plusY <- cbind(plus$Start, plus$Stop)
     row.names(plusY) = plus$Name
-    plusZ = as.matrix(plusY)
+    plusZ <- as.matrix(plusY)
 
 # plot plus strand
   circos.par(cell.padding=c(0,0,0,0),start.degree = 90, gap.degree=0, track.height = 0.1)
@@ -94,16 +94,16 @@ circos.clear()
   circos.clear() # and clear it
 
 #### Minus strand
-    minus$Color= as.character(minus$Color)
-    minus$Start=as.numeric(minus$Start)
-    minus$Stop=as.numeric(minus$Stop)
-    minusOrd = as.character(minus$Name)
-    minusFac = minus$Name
-    minusFac = factor(minusFac, levels = c(minusOrd))
+    minus$Color<- as.character(minus$Color)
+    minus$Start<-as.numeric(minus$Start)
+    minus$Stop<-as.numeric(minus$Stop)
+    minusOrd <- as.character(minus$Name)
+    minusFac <- minus$Name
+    minusFac <- factor(minusFac, levels = c(minusOrd))
   
-    minusY = cbind(minus$Start, minus$Stop)
+    minusY <- cbind(minus$Start, minus$Stop)
     row.names(minusY) = minus$Name
-    minusZ = as.matrix(minusY)
+    minusZ <- as.matrix(minusY)
 
   par(new = TRUE) # as the circlize doc says this is magic
   circos.par(cell.padding=c(0,0,0,0),gap.degree=0,start.degree = 90,"canvas.xlim" = c(-1.1, 1.1), "canvas.ylim" = c(-1.1, 1.1))
@@ -114,11 +114,11 @@ circos.clear()
 
 #### Coverage
 
-  coverage = log(coverage)-5
+  coverage <- log(coverage)-5
   
 # need some other things for plotting region and circos lines:
-    bases = c(1:length(coverage))
-    coverageFac = sample(letters[1], length(coverage), replace = TRUE)
+    bases <- c(1:length(coverage))
+    coverageFac <- sample(letters[1], length(coverage), replace = TRUE)
 
   par(new = TRUE) 
   circos.par(cell.padding=c(0,0.2,0,0.2), gap.degree=0,start.degree = 90, "canvas.xlim" = c(-1.20, 1.20), "canvas.ylim" = c(-1.20, 1.20))
@@ -129,10 +129,10 @@ circos.clear()
 
 
 #### GC Content ###
-  gcCont = getSequenceLocalData(seq,10, 100)
+  gcCont <- getSequenceLocalData(seq,10, 100)
 # again for circos.lines() we need:
-  seqFac = sample(letters[1], nrow(gcCont), replace = TRUE)
-  position = c(1:nrow(gcCont))
+  seqFac <- sample(letters[1], nrow(gcCont), replace = TRUE)
+  position <- c(1:nrow(gcCont))
 
 # Plot 
 par(new = TRUE)
